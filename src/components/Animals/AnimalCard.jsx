@@ -33,7 +33,7 @@ font-bold"
       </Link>
 
       <div className="p-6">
-        <Link href="/projects/1">
+        <Link href={`/animal/${animal.id}`}>
           <h3 className="text-xl text-gray-800 font-semibold mb-3 hover:text-primary transition-colors">
             {animal.name}
           </h3>
@@ -60,7 +60,7 @@ font-bold"
         </div>
 
         <Link
-          href={`/animals/${animal.id}`}
+          href={`/animal/${animal.id}`}
         >
           <button className="btn btn-primary w-full rounded-2xl"> See Details</button>
         </Link>
