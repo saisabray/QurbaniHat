@@ -17,7 +17,7 @@ export default function SortFilter() {
     router.push(`?${params.toString()}`);
   };
   return (
-    <div className="flex w-full md:w-auto">
+    <div className="flex w-full justify-center md:w-auto">
       <select
         className="select select-bordered w-full max-w-xs"
         onChange={handleSortChange}
