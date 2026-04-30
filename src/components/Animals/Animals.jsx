@@ -8,7 +8,7 @@ const Animals = async () => {
   return (
     <div className="container mx-auto mt-20">
       <h2 className="text-3xl font-bold mb-10 ">Featured animals </h2>
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 animate__animated animate__fadeInUp">
         {animalData.slice(0, 4).map((animal) => (
           <AnimalCard key={animal.id} animal={animal} />
         ))}

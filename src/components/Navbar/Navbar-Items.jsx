@@ -10,7 +10,7 @@ const NavbarItems = ({ user }) => {
   ];
   const pathName = usePathname();
   return (
-    <div className="font-semibold text-[18px] text-[#3B2F2F] space-x-5">
+    <div className="font-semibold text-[18px] text-[#3B2F2F] space-x-5 hidden sm:flex ">
       {items.map((item, index) => (
         <Link
           key={index}

@@ -12,7 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 
-const SignUpPage = () => {
+const UpdateProfilePage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -26,10 +26,10 @@ const SignUpPage = () => {
   };
  
   return (
-    <Card className="shadow-md mx-auto w-125 py-5 mt-10 bg-slate-200">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+    <Card className="shadow-md mx-auto w-screen sm:w-125 py-5 mt-10 mb-30">
+      <h1 className="text-center text-2xl font-bold">Update Profile</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4 space-y-3" onSubmit={onSubmit}>
+      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
           <Label>Name</Label>
           <Input placeholder="Enter your name" />
@@ -55,4 +55,4 @@ const SignUpPage = () => {
     </Card>
   );
 };
-export default SignUpPage;
+export default UpdateProfilePage;

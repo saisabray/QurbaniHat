@@ -66,16 +66,18 @@ const breeds = [
 
 const BreedAndTips = () => {
   return (
-    <div className="container mx-auto mt-20 px-4">
+    <div className="container mx-auto mt-20 px-4 ">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-primary">🐄 Qurbani Guide</h2>
-        <p className="text-gray-500 mt-2">
+        <h2 className="text-4xl font-bold text-primary animate__animated animate__fadeInUp animate__delay-1s">
+          🐄 Qurbani Guide
+        </h2>
+        <p className="text-gray-500 mt-2 animate__animated animate__fadeInUp animate__delay-1s">
           Best breeds & important tips for Qurbani
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10">
-        <div>
+      <div className="grid lg:grid-cols-2 gap-10 ">
+        <div className="animate__animated animate__fadeInLeft">
           <h3 className="text-2xl font-semibold mb-6 text-secondary">
             Qurbani Tips
           </h3>
@@ -99,7 +101,7 @@ const BreedAndTips = () => {
           </div>
         </div>
 
-        <div>
+        <div className="animate__animated animate__fadeInRight">
           <h3 className="text-2xl font-semibold mb-6 text-secondary">
             Popular Breeds
           </h3>

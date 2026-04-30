@@ -12,7 +12,7 @@ const ProfilePage = async () => {
   const user = session?.user;
   console.log({ session });
   return (
-    <div className="mx-auto w-5/12 p-10 shadow-sm rounded-2xl mt-10 flex flex-col items-center space-y-3 bg-gray-200">
+    <div className="mx-auto w-screen sm:w-5/12  sm:p-10 shadow-sm rounded-2xl mt-10 mb-20 flex flex-col items-center space-y-3 bg-gray-200">
       <h1 className="font-semibold text-[24px] text-black">Profile Info</h1>
       <div className="relative w-24 h-24 rounded-full overflow-hidden">
         <Image

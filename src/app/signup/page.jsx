@@ -40,7 +40,7 @@ const onGoogleSignUp = async () => {
     });
   }
   return (
-    <Card className="shadow-md mx-auto w-125 py-5 mt-10">
+    <Card className="shadow-md mx-auto w-screen sm:w-125 py-5 mt-10">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>

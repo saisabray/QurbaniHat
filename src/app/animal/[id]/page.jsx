@@ -10,8 +10,7 @@ const AnimalDetailsPage = async ({ params }) => {
 
   return (
     <div className="max-w-5xl mx-auto p-5">
-      {/* Animal Details */}
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl animate__animated animate__fadeInDown">
         <figure className="w-full lg:w-1/2">
           <Image
             src={animal.image}
@@ -54,8 +53,10 @@ const AnimalDetailsPage = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="mt-10 p-5 bg-base-100 rounded-lg shadow-xl">
-        <h2 className="card-title my-5 text-blue-400 text-2xl">Book This Animal</h2>
+      <div className="mt-10 p-5 bg-base-100 rounded-lg shadow-xl animate__animated animate__fadeInUp">
+        <h2 className="card-title my-5 text-blue-400 text-2xl">
+          Book This Animal
+        </h2>
         <div
           className="max-w-md mx-auto my-5
         "
