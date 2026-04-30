@@ -16,14 +16,16 @@ const Navbar = async () => {
   return (
     <div className="sticky top-0 z-50 w-full py-4 bg-[#e4a110]">
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 rounded-lg relative">
-        <Image
-          src="/assets/images/logo.png"
-          alt="Logo"
-          width={150}
-          height={150}
-          className="w-[100px] md:w-[150px] h-auto"
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/assets/images/logo.png"
+            alt="Logo"
+            width={150}
+            height={150}
+            className="w-[100px] md:w-[150px] h-auto"
+            priority
+          />
+        </Link>
         <div>
           <NavbarItems user={user} />
         </div>

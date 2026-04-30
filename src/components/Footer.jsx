@@ -18,7 +18,6 @@ const Footer = () => {
           alt="Logo"
           width={200}
           height={200}
-          
         />
       </nav>
       <nav className="grid grid-flow-col gap-4 w-fit mx-auto mt-5">
@@ -32,24 +31,20 @@ const Footer = () => {
       <nav>
         <div className="grid grid-flow-col gap-4 w-fit mx-auto mt-5">
           <Link
-            href="https://www.facebook.com/yourpage"
+            href="https://www.facebook.com/saisab.roy.14"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaFacebook className="w-10 h-10" />
           </Link>
           <Link
-            href="https://www.twitter.com/yourprofile"
+            href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaTwitter className="w-10 h-10" />
           </Link>
-          <Link
-            href="https://wa.me/yourwhatsapplink"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="https://wa.me" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp className="w-10 h-10" />
           </Link>
         </div>
