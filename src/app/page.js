@@ -1,7 +1,11 @@
+import Animals from "@/components/Animals/Animals";
 import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
-   <Banner/>
+    <main>
+      <Banner />
+      <Animals />
+    </main>
   );
 }

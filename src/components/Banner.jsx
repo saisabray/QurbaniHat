@@ -22,7 +22,7 @@ const Banner = () => {
             Explore a wide range of healthy and premium livestock for your
             Qurbani. Book with trust, sacrifice with peace.
           </p>
-          <a href="#animals">
+          <a href="/animals">
             <button className="btn btn-primary">Browse Animals</button>
           </a>
         </div>
