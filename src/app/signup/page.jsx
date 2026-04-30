@@ -14,9 +14,8 @@ import {
 import { useRouter } from "next/navigation";
 
 const SignUpPage = () => {
-   const router = useRouter();
+  const router = useRouter();
   const onSubmit = async (e) => {
-   
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
@@ -33,9 +32,13 @@ const SignUpPage = () => {
     if (error) {
       alert(error.message);
     }
-      router.push("/signin");
+    router.push("/signin");
   };
-
+const onGoogleSignUp = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  }
   return (
     <Card className="shadow-md mx-auto w-125 py-5 mt-10">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
@@ -107,6 +110,13 @@ const SignUpPage = () => {
           </Button>
         </div>
       </Form>
+      <p className="text-center text-2xl text-gray-400 font-semibold">Or</p>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={onGoogleSignUp}
+      >
+        Sign Up with Google
+      </button>
     </Card>
   );
 };

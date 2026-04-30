@@ -26,10 +26,14 @@ const SignUpPage = () => {
     });
     console.log({ data, error });
   };
-
+  const onGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   return (
     <Card className="shadow-md mx-auto w-125 py-5 mt-10">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+      <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
@@ -79,13 +83,20 @@ const SignUpPage = () => {
         <div className="flex gap-2">
           <Button type="submit" variant="secondary">
             <Check />
-            Sign Up
+            Sign In
           </Button>
           <Button type="reset" variant="secondary">
             Reset
           </Button>
         </div>
       </Form>
+      <p className="text-center text-2xl text-gray-400 font-semibold">Or</p>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={onGoogleSignIn}
+      >
+        Sign In with Google
+      </button>
     </Card>
   );
 };
