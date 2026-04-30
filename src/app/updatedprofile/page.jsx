@@ -11,8 +11,10 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { toast } from "react-toastify";
 
 const UpdateProfilePage = () => {
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -22,7 +24,8 @@ const UpdateProfilePage = () => {
       image,
       name
     });
-    alert("Profile updated successfully!");
+    toast.success("Profile updated successfully!");
+    e.target.reset();
   };
  
   return (

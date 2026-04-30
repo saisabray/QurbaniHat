@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -24,12 +25,17 @@ const SignUpPage = () => {
       password,
       callbackURL: "/",
     });
-    console.log({ data, error });
+    if (error) {
+      toast.error("Failed to sign in: " + error.message);
+    }
+    toast.success("Sign in successful! Redirecting...");
   };
   const onGoogleSignIn = async () => {
+    
     await authClient.signIn.social({
       provider: "google",
     });
+    toast.success("Redirecting to Google sign in...");
   };
   return (
     <Card className="shadow-md mx-auto w-screen sm:w-125 py-5 mt-10">

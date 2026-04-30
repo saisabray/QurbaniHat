@@ -3,7 +3,7 @@ import NavbarItems from "./Navbar-Items";
 import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
-import { Avatar, Button } from "@heroui/react";
+import { Avatar } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import SignOutButton from "./SignOut";
 const Navbar = async () => {
@@ -15,12 +15,13 @@ const Navbar = async () => {
 
   return (
     <div className="sticky top-0 z-50 w-full py-4 bg-[#e4a110]">
-      <div className="container mx-auto flex justify-between items-center px-6 rounded-lg">
+      <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 rounded-lg relative">
         <Image
           src="/assets/images/logo.png"
           alt="Logo"
           width={150}
           height={150}
+          className="w-[100px] md:w-[150px] h-auto"
           priority
         />
         <div>
@@ -43,12 +44,12 @@ const Navbar = async () => {
         )}
         {!user && (
           <div className="flex justify-between gap-3 font-semibold">
-            <Button variant="outline">
+            <button className="btn btn-secondary">
               <Link href="/signup">Sign Up</Link>
-            </Button>
-            <Button variant="outline">
+            </button>
+            <button className="btn btn-primary ">
               <Link href="/signin">Sign In</Link>
-            </Button>
+            </button>
           </div>
         )}
       </div>
