@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AnimalCard = ({ animal }) => {
-  console.log(animal);
   return (
     <div className="card bg-slate-50 rounded-xl hover:border-primary transition-all overflow-hidden shadow-xl max-w-md mx-auto relative">
       <Chip
