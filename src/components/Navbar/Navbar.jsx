@@ -21,7 +21,7 @@ const Navbar = async () => {
           alt="Logo"
           width={150}
           height={150}
-          priority
+          
         />
         <div>
           <NavbarItems user={user} />
