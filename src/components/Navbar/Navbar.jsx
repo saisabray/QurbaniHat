@@ -14,13 +14,13 @@ const Navbar = async () => {
   console.log({ session });
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-[#e4a110]">
+    <div className="sticky top-0 z-50 w-full py-4 bg-[#e4a110]">
       <div className="container mx-auto flex justify-between items-center px-6 rounded-lg">
         <Image
           src="/assets/images/logo.png"
           alt="Logo"
-          width={80}
-          height={80}
+          width={150}
+          height={150}
           priority
         />
         <div>
