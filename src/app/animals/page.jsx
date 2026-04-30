@@ -1,10 +1,20 @@
+import AnimalCard from "@/components/Animals/AnimalCard";
+import animalDataFetch from "@/lib/api";
+import Image from "next/image";
+import Link from "next/link";
 
-const AllAnimals = () => {
-    return (
-        <div>
-            <h1>All Animals</h1>
-        </div>
-    );
+const AnimalsPage = async () => {
+  const animalData = await animalDataFetch();
+  return (
+    <div className="container mx-auto mt-20">
+      <h2 className="text-3xl font-bold mb-10 ">Featured animals </h2>
+      <div className="grid grid-cols-4 gap-10">
+        {animalData.map((animal) => (
+          <AnimalCard key={animal.id} animal={animal} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default AllAnimals;
+export default AnimalsPage;
