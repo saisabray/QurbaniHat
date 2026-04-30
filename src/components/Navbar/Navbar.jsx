@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavbarItems from "./Navbar-Items";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 w-full bg-[#e4a110]">
@@ -14,7 +15,10 @@ const Navbar = () => {
         <div>
           <NavbarItems />
         </div>
-        <div></div>
+        <div>
+          <Link href="/signup">Sign Up</Link>
+          <Link href="/signin">Sign In</Link>
+        </div>
       </div>
     </div>
   );
